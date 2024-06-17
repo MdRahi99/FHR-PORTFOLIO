@@ -12,7 +12,7 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={`${inter.className} bg-gray-50 flex flex-col min-h-screen`}>
+      <body className={`${inter.className} bg-gradient-to-r from-white to-gray-200  flex flex-col min-h-screen`}>
         <div className="flex-1">
           <div className="w-full lg:max-w-7xl px-4 lg:px-0 mx-auto grid grid-cols-12 gap-8 my-10">
             {/* Sidebar for mobile (hidden on lg screens) */}

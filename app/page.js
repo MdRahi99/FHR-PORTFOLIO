@@ -1,8 +1,10 @@
+import Overview from "./components/Overview/Overview";
+
 export default async function Home() {
 
   return (
       <div className="">
-          <h1>Home</h1>
+          <Overview />
       </div>
   );
 }

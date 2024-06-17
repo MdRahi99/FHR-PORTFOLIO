@@ -9,7 +9,7 @@ const Sidebar = () => {
     const path = usePathname();
 
     return (
-        <div className='p-3 lg:p-6 bg-white shadow lg:rounded-xl'>
+        <div className='p-3 lg:p-6 shadow lg:rounded-xl'>
             <div className='lg:flex items-center gap-4 hidden'>
                 <h1 className='text-2xl bg-black text-white h-10 w-10 rounded-full flex items-center justify-center'>R</h1>
                 <h3 className='text-lg lg:text-2xl font-medium'>FHR</h3>
