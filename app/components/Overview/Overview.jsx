@@ -11,7 +11,7 @@ const Overview = () => {
         <Image
           src={profile}
           alt="Profile Picture"
-          className="rounded-full h-[200px] w-[200px] shadow-lg"
+          className="rounded-full shadow-orange-400 h-[200px] w-[200px] shadow"
         />
       </div>
 
