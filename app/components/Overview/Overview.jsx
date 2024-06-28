@@ -4,11 +4,13 @@ import Image from 'next/image';
 import React from 'react';
 import profile from '../../../public/images/profile.png';
 import { TypeAnimation } from 'react-type-animation';
+import Link from 'next/link';
+import { ImProfile } from "react-icons/im";
 
 const Overview = () => {
   return (
-    <div className="px-4 lg:px-12 flex flex-col items-center justify-center gap-8 text-justify lg:text-center py-12">
-      <div className="hover:scale-105 transition-transform duration-300 ease-in-out">
+    <div className="overview_bg lg:h-screen opacity-75 px-4 lg:px-12 flex flex-col justify-center gap-8 py-4 lg:py-12">
+      <div className="flex items-center justify-center hover:scale-105 transition-transform duration-300 ease-in-out">
         <Image
           src={profile}
           alt="Profile Picture"
@@ -16,26 +18,40 @@ const Overview = () => {
         />
       </div>
 
-      <div className="flex flex-col gap-8">
-        <h1 className="text-3xl font-bold">
-          <TypeAnimation
-            sequence={[
-              "Hey, I'm Rahi",
-              1000, // Waits 1s
-              "Front-end Developer",
-              1000, // Waits 1s
-              "ReactJS Enthusiast",
-              1000, // Waits 1s
-            ]}
-            wrapper="span"
-            cursor={false}
-            repeat={Infinity}
-            style={{ display: 'inline-block' }}
-          />
+      <div className="flex flex-col gap-6">
+        <h1 className="text-2xl lg:text-3xl text-center font-semibold w-full">
+          Hey, I'm Rahi{' '}
+          <span className="text-orange-500 font-normal">
+            (
+            <TypeAnimation
+              sequence={[
+                "Front-end Developer",
+                1000,
+                "ReactJS Enthusiast",
+                1000,
+              ]}
+              wrapper="span"
+              cursor={true}
+              cursorStyle="_"
+              repeat={Infinity}
+              style={{ display: 'inline-block' }}
+            />
+            )
+          </span>
         </h1>
-        <p className="text-gray-500 text-lg leading-8">
-          Front-end developer with 2+ years of experience in creating dynamic web solutions. Skilled in ReactJS, NextJS, and Tailwind CSS. I build pixel-perfect, responsive designs. I also craft robust backend applications with NodeJS and ExpressJS. Let's create something amazing together! Reach out to me.
+        <p className="text-gray-700 text-sm lg:text-lg leading-8 lg:px-20 text-justify">
+          Front-end developer with 2+ years of experience in creating dynamic web solutions. Skilled in ReactJS, Next.js, and Tailwind CSS. I focus on crafting pixel-perfect, responsive designs and building robust backend applications with Node.js and Express.js. Let's create something amazing together! Reach out to me.
         </p>
+      </div>
+
+      <div className="flex gap-2 justify-end lg:px-20">
+        <Link
+          href="/about"
+          className="flex items-center justify-center px-6 py-2 rounded-lg border-2 border-orange-500 text-orange-500 hover:bg-orange-500 hover:text-white transition-all duration-300 ease-in-out"
+        >
+          <ImProfile className="text-xl mr-2" />
+          <span className="font-medium">Explore</span>
+        </Link>
       </div>
     </div>
   );

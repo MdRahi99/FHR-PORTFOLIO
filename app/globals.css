@@ -1,3 +1,7 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.overview_bg{
+    background: url('../public/images/overview_bg.png');
+}
