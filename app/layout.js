@@ -23,7 +23,7 @@ export default function RootLayout({ children }) {
             <div className="hidden lg:block col-span-12 lg:col-span-3 order-2 lg:order-1">
               <Sidebar />
             </div>
-            <div className="col-span-12 lg:col-span-9 order-1 lg:order-2">
+            <div className="col-span-12 lg:col-span-9 order-1 lg:order-2 pb-16 lg:pb-0">
               {children}
             </div>
           </div>

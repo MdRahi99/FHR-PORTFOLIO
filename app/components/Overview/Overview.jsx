@@ -9,7 +9,11 @@ import { ImProfile } from "react-icons/im";
 
 const Overview = () => {
   return (
-    <div className="overview_bg lg:h-screen opacity-75 px-4 lg:px-12 flex flex-col justify-center gap-8 py-4 lg:py-12">
+    <div className="min-h-screen opacity-75 px-4 lg:px-12 flex flex-col gap-8 py-4 lg:py-12">
+      <div>
+        <h1 className="text-2xl lg:text-3xl font-bold mb-4">Overview</h1>
+        <div className="w-20 h-1 bg-orange-500 mb-6"></div>
+      </div>
       <div className="flex items-center justify-center hover:scale-105 transition-transform duration-300 ease-in-out">
         <Image
           src={profile}
@@ -39,18 +43,25 @@ const Overview = () => {
             )
           </span>
         </h1>
-        <p className="text-gray-700 text-sm lg:text-lg leading-8 lg:px-20 text-justify">
+        <p className="text-gray-700 text-sm lg:text-lg leading-8 text-justify">
           Front-end developer with 2+ years of experience in creating dynamic web solutions. Skilled in ReactJS, Next.js, and Tailwind CSS. I focus on crafting pixel-perfect, responsive designs and building robust backend applications with Node.js and Express.js. Let's create something amazing together! Reach out to me.
         </p>
       </div>
 
-      <div className="flex gap-2 justify-end lg:px-20">
+      <div className="flex justify-center gap-3 mb-4 mt-0 lg:mb-0 lg:mt-4">
         <Link
           href="/about"
-          className="flex items-center justify-center px-6 py-2 rounded-lg border-2 border-orange-500 text-orange-500 hover:bg-orange-500 hover:text-white transition-all duration-300 ease-in-out"
+          className="flex w-full lg:w-1/5 items-center justify-center px-6 py-2 rounded-lg border-2 border-orange-500 text-orange-500 hover:bg-orange-500 hover:text-white transition-all duration-300 ease-in-out"
         >
           <ImProfile className="text-xl mr-2" />
           <span className="font-medium">Explore</span>
+        </Link>
+        <Link
+          href="/contact"
+          className="flex w-full lg:w-1/5 items-center justify-center px-6 py-2 rounded-lg border-2 border-orange-500 hover:text-orange-500 hover:bg-gray-50 bg-orange-500 text-white transition-all duration-300 ease-in-out"
+        >
+          <ImProfile className="text-xl mr-2" />
+          <span className="font-medium">Contact</span>
         </Link>
       </div>
     </div>
