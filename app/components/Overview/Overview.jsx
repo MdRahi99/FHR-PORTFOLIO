@@ -6,10 +6,11 @@ import profile from '../../../public/images/profile.png';
 import { TypeAnimation } from 'react-type-animation';
 import Link from 'next/link';
 import { ImProfile } from "react-icons/im";
+import { GrContact } from "react-icons/gr";
 
 const Overview = () => {
   return (
-    <div className="min-h-screen opacity-75 px-4 lg:px-12 flex flex-col gap-8 py-4 lg:py-12">
+    <div className="min-h-screen opacity-75 px-4 lg:px-12 flex flex-col gap-4 py-4 lg:py-12">
       <div>
         <h1 className="text-2xl lg:text-3xl font-bold mb-4">Overview</h1>
         <div className="w-20 h-1 bg-orange-500 mb-6"></div>
@@ -48,19 +49,19 @@ const Overview = () => {
         </p>
       </div>
 
-      <div className="flex justify-center gap-3 mb-4 mt-0 lg:mb-0 lg:mt-4">
+      <div className="flex justify-center gap-8 mb-4 mt-0 lg:mb-0 lg:mt-8">
         <Link
           href="/about"
-          className="flex w-full lg:w-1/5 items-center justify-center px-6 py-2 rounded-lg border-2 border-orange-500 text-orange-500 hover:bg-orange-500 hover:text-white transition-all duration-300 ease-in-out"
+          className="flex w-full lg:w-1/6 items-center justify-center py-2 lg:py-3 rounded-lg border-2 border-orange-500 text-orange-500 hover:bg-orange-500 hover:text-white transition-all duration-300 ease-in-out"
         >
           <ImProfile className="text-xl mr-2" />
           <span className="font-medium">Explore</span>
         </Link>
         <Link
           href="/contact"
-          className="flex w-full lg:w-1/5 items-center justify-center px-6 py-2 rounded-lg border-2 border-orange-500 hover:text-orange-500 hover:bg-gray-50 bg-orange-500 text-white transition-all duration-300 ease-in-out"
+          className="flex w-full lg:w-1/6 items-center justify-center py-2 lg:py-3 rounded-lg border-2 border-orange-500 hover:text-orange-500 hover:bg-gray-50 bg-orange-500 text-white transition-all duration-300 ease-in-out"
         >
-          <ImProfile className="text-xl mr-2" />
+          <GrContact className="text-xl mr-2" />
           <span className="font-medium">Contact</span>
         </Link>
       </div>

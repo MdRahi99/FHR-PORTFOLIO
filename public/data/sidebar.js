@@ -21,11 +21,6 @@ const sidebarItems = [
         "icon": <RiCodeBoxFill className="text-2xl" />
     },
     {
-        "name": "Skills",
-        "route": "/skills",
-        "icon": <PiCertificateFill className="text-2xl" />
-    },
-    {
         "name": "Contact",
         "route": "/contact",
         "icon": <BiSolidContact className="text-2xl" />

@@ -12,7 +12,7 @@ const Sidebar = () => {
   const path = usePathname();
 
   return (
-    <div className="p-4 lg:p-6 bg-white border-r-4 lg:h-screen rounded-t-3xl lg:rounded-r-3xl flex flex-col gap-20">
+    <div className="p-4 lg:p-6 bg-white border-r-4 lg:h-screen rounded-t-3xl lg:rounded-r-3xl flex flex-col gap-8">
 
       {/* Header Section */}
       <div className="hidden lg:flex items-center gap-3 lg:gap-4 py-3 lg:py-4 px-4 lg:px-6 bg-gray-100 rounded-t-3xl">
