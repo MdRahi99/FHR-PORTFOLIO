@@ -13,7 +13,7 @@ const Contact = () => {
 
     return (
         <div className="min-h-screen px-4 lg:px-12 py-12 flex flex-col">
-            <div className="mb-16">
+            <div className="mb-10">
                 <h1 className="text-2xl lg:text-3xl font-bold mb-4">Get in Touch</h1>
                 <div className="w-20 h-1 bg-orange-500 mb-6"></div>
                 <p className="text-gray-500 text-lg max-w-2xl">
@@ -22,7 +22,7 @@ const Contact = () => {
                 </p>
             </div>
 
-            <div className="grid lg:grid-cols-3 gap-16">
+            <div className="grid lg:grid-cols-3 gap-20">
                 <form onSubmit={handleSubmit(onSubmit)} className="space-y-6 col-span-2">
                     <div className="grid lg:grid-cols-2 gap-6">
                         <input
