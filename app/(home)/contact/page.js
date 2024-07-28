@@ -1,10 +1,10 @@
 import React from 'react';
-import About from '../components/About/About';
+import Contact from '../../components/Contact/Contact';
 
 const page = () => {
     return (
         <div>
-            <About />
+            <Contact />
         </div>
     );
 };

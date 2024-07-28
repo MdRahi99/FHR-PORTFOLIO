@@ -5,3 +5,10 @@
 .overview_bg{
     background: url('../public/images/overview_bg.png');
 }
+
+.rotated-text {
+    writing-mode: horizontal-tb;
+    text-orientation: mixed;
+    transform: rotate(0deg);
+  }
+  

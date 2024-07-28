@@ -1,4 +1,4 @@
-import Overview from "./components/Overview/Overview";
+import Overview from "../components/Overview/Overview";
 
 export default async function Home() {
 

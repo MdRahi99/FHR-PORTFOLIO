@@ -1,29 +1,25 @@
-import { MdDashboardCustomize } from "react-icons/md";
-import { HiChatBubbleLeftEllipsis } from "react-icons/hi2";
-import { RiCodeBoxFill } from "react-icons/ri";
-import { PiCertificateFill } from "react-icons/pi";
-import { BiSolidContact } from "react-icons/bi";
+import { FiHome, FiUser, FiCode, FiMessageSquare } from "react-icons/fi";
 
 const sidebarItems = [
     {
         "name": "Overview",
         "route": "/",
-        "icon": <MdDashboardCustomize className="text-2xl" />
+        "icon": <FiHome className="text-2xl" />
     },
     {
         "name": "About Me",
         "route": "/about",
-        "icon": <HiChatBubbleLeftEllipsis className="text-2xl" />
+        "icon": <FiUser className="text-2xl" />
     },
     {
         "name": "Projects",
         "route": "/projects",
-        "icon": <RiCodeBoxFill className="text-2xl" />
+        "icon": <FiCode className="text-2xl" />
     },
     {
         "name": "Contact",
         "route": "/contact",
-        "icon": <BiSolidContact className="text-2xl" />
+        "icon": <FiMessageSquare className="text-2xl" />
     }
 ]
 
