@@ -6,6 +6,7 @@ import project from "../../../public/images/project.jpg";
 import Image from "next/image";
 
 const ProjectCard = ({ content }) => {
+  console.log(content);
   return (
     <div className="relative w-full h-96 lg:h-64 shadow-lg overflow-hidden">
       {/* Background image */}
