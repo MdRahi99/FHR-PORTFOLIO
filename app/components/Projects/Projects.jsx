@@ -39,7 +39,7 @@ const Projects = () => {
       </div>
       <div className="mt-4 grid grid-cols-1 lg:grid-cols-3 gap-8">
         {tabsData.map((content) => (
-          <ProductCard content={content} />
+          <ProductCard key={content.id} content={content} />
         ))}
       </div>
     </div>
