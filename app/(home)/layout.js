@@ -27,7 +27,7 @@ export default function RootLayout({ children }) {
           <div className="col-span-1 lg:flex hidden items-center">
             <LeftMenu />
           </div>
-          <div className="col-span-10 py-4 lg:py-0 text-white h-[580px] overflow-y-auto">{children}</div>
+          <div className="col-span-10 pt-4 pb-8 lg:py-0 text-white h-[580px] overflow-y-auto custom-scrollbar">{children}</div>
           <div className="col-span-1 lg:flex hidden items-center justify-end">
             <RightMenu />
           </div>
