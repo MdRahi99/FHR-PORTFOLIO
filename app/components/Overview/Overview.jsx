@@ -8,7 +8,7 @@ import SeeMore from "../SeeMore/SeeMore";
 
 const Overview = () => {
   return (
-    <div className="h-full opacity-75 flex flex-col gap-4 pt-10 lg:pt-20">
+    <div className="h-full flex flex-col gap-4 pt-10 lg:pt-20">
       {/* <div className="flex items-center justify-center hover:scale-105 transition-transform duration-300 ease-in-out">
         <Image
           src={profile}
@@ -17,7 +17,7 @@ const Overview = () => {
         />
       </div> */}
 
-      <div className="flex flex-col gap-6 w-full lg:w-[70%] mx-auto">
+      <div className="flex flex-col gap-6">
         <h1 className="text-hover font-medium">Hi,</h1>
         <h2 className="text-3xl lg:text-5xl">I'm Md Forhad Hossain </h2>
         <h1 className="text-2xl lg:text-3xl font-semibold w-full">
@@ -44,9 +44,9 @@ const Overview = () => {
           backend applications with Node.js and Express.js. Let's create
           something amazing together! Reach out to me.
         </p>
-        <div>
-          <SeeMore url={'/about'} title={`See More About Me`} />
-        </div>
+      </div>
+      <div className="flex items-end justify-end pr-2">
+        <SeeMore url={"/about"} title={`See More About Me`} />
       </div>
     </div>
   );

@@ -2,6 +2,7 @@
 import React, { useState } from "react";
 import tabsData from "@/public/data/about_tabs";
 import ProductCard from "../ProjectCard/ProjectCard";
+import SeeMore from "../SeeMore/SeeMore";
 
 const Projects = () => {
   const [activeTab, setActiveTab] = useState(tabsData[0].id);
@@ -15,7 +16,7 @@ const Projects = () => {
         </div>
         {/* Tabs */}
         <div className="flex flex-col">
-          <div className="flex gap-12 flex-wrap">
+          <div className="flex gap-8 flex-wrap">
             {tabsData.map((tab) => (
               <button
                 key={tab.id}
@@ -37,10 +38,13 @@ const Projects = () => {
           </div>
         </div>
       </div>
-      <div className="mt-4 grid grid-cols-1 lg:grid-cols-3 gap-8">
+      <div className="mt-4 grid grid-cols-1 lg:grid-cols-2 gap-4">
         {tabsData.map((content) => (
           <ProductCard key={content.id} content={content} />
         ))}
+      </div>
+      <div className="flex items-end justify-end pr-2">
+        <SeeMore url={"/contact"} title={`Lets Go To My Resume`} />
       </div>
     </div>
   );

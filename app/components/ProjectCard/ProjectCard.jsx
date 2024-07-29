@@ -13,7 +13,7 @@ const ProjectCard = ({ content }) => {
       <Image
         src={project}
         alt="Project"
-        className="absolute inset-0 rounded-md opacity-80 w-full h-full object-cover"
+        className="absolute inset-0 rounded-md opacity-90 w-full h-full object-cover"
       />
 
       {/* Glass effect on hover for larger screens, visible by default on small screens */}
@@ -29,8 +29,8 @@ const ProjectCard = ({ content }) => {
             </Link>
           </div>
         </div>
-        <div className="flex flex-col gap-4">
-          <h3 className="text-lg font-medium text-white">
+        <div className="flex flex-col gap-6">
+          <h3 className="font-medium text-white">
             Integrating Algolia Search with WordPress Multisite
           </h3>
           <p className="text-primary text-sm">
@@ -39,9 +39,9 @@ const ProjectCard = ({ content }) => {
           </p>
         </div>
         <div className="flex space-x-2">
-          <span className="bg-primary px-4 py-2 text-xs rounded text-white">Algolia</span>
-          <span className="bg-primary px-4 py-2 text-xs rounded text-white">WordPress</span>
-          <span className="bg-primary px-4 py-2 text-xs rounded text-white">PHP</span>
+          <span className="bg-secondary px-4 py-2 text-xs rounded text-white">Algolia</span>
+          <span className="bg-secondary px-4 py-2 text-xs rounded text-white">WordPress</span>
+          <span className="bg-secondary px-4 py-2 text-xs rounded text-white">PHP</span>
         </div>
       </div>
     </div>

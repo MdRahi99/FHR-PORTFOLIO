@@ -1,9 +1,9 @@
 import { FiLinkedin, FiGithub, FiFacebook, FiMail } from "react-icons/fi";
 
 const socialIcons = [
-  { icon: <FiFacebook />, url: '#' },
-  { icon: <FiLinkedin />, url: '#' },
-  { icon: <FiGithub />, url: '#' }
+  { name: 'Facebook', icon: <FiFacebook />, url: '#' },
+  { name: 'LinkedIn', icon: <FiLinkedin />, url: '#' },
+  { name: 'Github', icon: <FiGithub />, url: '#' }
 ];
 
 export default socialIcons;

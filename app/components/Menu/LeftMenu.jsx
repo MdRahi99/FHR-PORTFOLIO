@@ -8,8 +8,8 @@ const LeftMenu = () => {
   const path = usePathname();
 
   return (
-    <div className="flex flex-col justify-end lg:flex-col gap-8">
-      <div className="h-24 flex justify-center">
+    <div className="flex flex-col justify-center lg:flex-col gap-8">
+      <div className="h-24 flex pl-4">
         <div className="border-l-2 border-secondary h-full"></div>
       </div>
       {sidebarItems?.map((item, index) => {
@@ -21,18 +21,17 @@ const LeftMenu = () => {
             className={`group flex items-center gap-4 p-2 rounded-md transition-colors duration-300 ${
               isActive
                 ? "font-semibold text-hover"
-                : "text-secondary hover:text-primary"
+                : "text-secondary hover:text-hover"
             }`}
           >
             {item.icon}
-            {/* <h3 className="hidden lg:flex lg:transition-opacity lg:duration-300">
-                {item.name}
-              </h3> */}
+            <h3 className="hidden lg:block opacity-0 group-hover:opacity-100 transition-all duration-300 transform translate-x-[-20px] group-hover:translate-x-0">
+              {item.name}
+            </h3>
           </Link>
         );
       })}
-
-      <div className="h-24 flex justify-center">
+      <div className="h-24 flex pl-4">
         <div className="border-l-2 border-secondary h-full"></div>
       </div>
     </div>
