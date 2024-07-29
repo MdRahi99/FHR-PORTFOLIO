@@ -44,7 +44,7 @@ const Projects = () => {
         ))}
       </div>
       <div className="flex items-end justify-end pr-2">
-        <SeeMore url={"/contact"} title={`Lets Go To My Resume`} />
+        <SeeMore url={"/resume"} title={`Lets Go To My Resume`} />
       </div>
     </div>
   );
