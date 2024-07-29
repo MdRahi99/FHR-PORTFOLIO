@@ -9,7 +9,7 @@ const MobileMenu = () => {
   const path = usePathname();
 
   return (
-    <div className="px-4 py-2 bg-primary flex flex-col gap-8">
+    <div className="px-4 py-2 bg-secondary flex flex-col gap-8">
       <div className="flex flex-row justify-between gap-3 px-4">
         {sidebarItems?.map((item, index) => {
           const isActive = path === item.route;

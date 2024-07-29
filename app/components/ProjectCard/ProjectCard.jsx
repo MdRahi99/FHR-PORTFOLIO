@@ -8,12 +8,12 @@ import Image from "next/image";
 const ProjectCard = ({ content }) => {
   console.log(content);
   return (
-    <div className="relative w-full h-96 lg:h-64 shadow-lg overflow-hidden">
+    <div className="relative w-full rounded-md h-96 lg:h-64 shadow-lg overflow-hidden">
       {/* Background image */}
       <Image
         src={project}
         alt="Project"
-        className="absolute inset-0 opacity-80 w-full h-full object-cover"
+        className="absolute inset-0 rounded-md opacity-80 w-full h-full object-cover"
       />
 
       {/* Glass effect on hover for larger screens, visible by default on small screens */}

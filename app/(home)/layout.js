@@ -15,7 +15,7 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={`${inter.className} bg-primary flex flex-col gap-8 max-w-[1500px] mx-auto 2xl:px-16 xl:px-14 lg:px-12 md:px-10 px-4 py-8`}>
+      <body className={`${inter.className} custom-scrollbar bg-primary flex flex-col gap-8 max-w-[1500px] mx-auto 2xl:px-16 xl:px-14 lg:px-12 md:px-10 px-4 py-8`}>
         <div className="">
           <TopMenu />
         </div>
@@ -27,7 +27,7 @@ export default function RootLayout({ children }) {
           <div className="col-span-1 lg:flex hidden items-center">
             <LeftMenu />
           </div>
-          <div className="col-span-10 py-4 lg:py-0 text-white h-[580px] overflow-y-auto custom-scrollbar">{children}</div>
+          <div className="col-span-10 py-4 pb-12 lg:pb-0 lg:py-0 text-white h-fit lg:h-[580px] overflow-y-auto custom-scrollbar">{children}</div>
           <div className="col-span-1 lg:flex hidden items-center justify-end">
             <RightMenu />
           </div>
