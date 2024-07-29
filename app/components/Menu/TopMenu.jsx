@@ -19,8 +19,8 @@ const TopMenu = () => {
           onClick={handleBtn}
           className="flex w-32 items-center justify-center py-1.5 rounded-md border-2 hover:border-primary hover:text-primary border-hover text-hover transition-all duration-300 ease-in-out"
         >
-          <BsFiletypePdf className="text-lg mr-2" />
-          <span className="font-medium">Resume</span>
+          <BsFiletypePdf className="mr-2" />
+          <span className="font-medium text-sm">Resume</span>
       </button>
     </div>
   );

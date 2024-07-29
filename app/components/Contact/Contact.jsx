@@ -22,7 +22,7 @@ const Contact = () => {
       <div className="mb-10">
         <h1 className="text-2xl lg:text-3xl font-bold mb-4">Get in Touch</h1>
         <div className="w-20 h-1 bg-hover mb-6"></div>
-        <p className="text-secondary text-lg max-w-2xl">
+        <p className="text-secondary border-opacity-40 rounded-md max-w-2x3">
           If you have any suggestions, project ideas, or even if you just want
           to say "hi", please fill out the form below. I'll get back to you
           shortly.
@@ -39,7 +39,7 @@ const Contact = () => {
               {...register("name", { required: "Name is required" })}
               type="text"
               placeholder="Name"
-              className="bg-primary border border-secondary px-4 py-2 w-full focus:outline-none transition duration-300"
+              className="bg-primary border border-secondary border-opacity-40 rounded-md px-4 py-3 w-full focus:outline-none transition duration-300"
             />
             <input
               {...register("email", {
@@ -51,31 +51,31 @@ const Contact = () => {
               })}
               type="email"
               placeholder="Email"
-              className="bg-primary border border-secondary px-4 py-2 w-full focus:outline-none transition duration-300"
+              className="bg-primary border border-secondary border-opacity-40 rounded-md px-4 py-3 w-full focus:outline-none transition duration-300"
             />
             <input
               {...register("phone")}
               type="tel"
               placeholder="Phone"
-              className="bg-primary border border-secondary px-4 py-2 w-full focus:outline-none transition duration-300"
+              className="bg-primary border border-secondary border-opacity-40 rounded-md px-4 py-3 w-full focus:outline-none transition duration-300"
             />
             <input
               {...register("subject", { required: "Subject is required" })}
               type="text"
               placeholder="Subject"
-              className="bg-primary border border-secondary px-4 py-2 w-full focus:outline-none transition duration-300"
+              className="bg-primary border border-secondary border-opacity-40 rounded-md px-4 py-3 w-full focus:outline-none transition duration-300"
             />
           </div>
           <textarea
             {...register("message", { required: "Message is required" })}
             placeholder="Message"
             rows="4"
-            className="bg-primary border border-secondary px-4 py-2 w-full focus:outline-none transition duration-300"
+            className="bg-primary border border-secondary border-opacity-40 rounded-md px-4 py-3 w-full focus:outline-none transition duration-300"
           ></textarea>
           <div className="flex w-full lg:w-[30%]">
             <button
               type="submit"
-              className="border-2 text-sm border-primary py-3 hover:border-hover hover:text-hover transition duration-300 ease-in-out w-full"
+              className="border-2 text-sm border-primary rounded-md py-3 hover:border-hover hover:text-hover transition duration-300 ease-in-out w-full"
             >
               Send Message
             </button>
@@ -87,13 +87,13 @@ const Contact = () => {
             <h3 className="flex items-center text-xl font-semibold mb-2">
               <ImLocation className="mr-2 text-hover" /> Address
             </h3>
-            <p className="text-secondary">Dhaka, Bangladesh</p>
+            <p className="text-secondary border-opacity-40 rounded-md">Dhaka, 3angladesh</p>
           </div>
           <div>
             <h3 className="flex items-center text-xl font-semibold mb-2">
               <ImPhone className="mr-2 text-hover" /> Phone
             </h3>
-            <p className="text-secondary">+8801799550816</p>
+            <p className="text-secondary border-opacity-40 rounded-md">+8801793550816</p>
           </div>
           <div>
             <h3 className="flex items-center text-xl font-semibold mb-2">
@@ -101,7 +101,7 @@ const Contact = () => {
             </h3>
             <a
               href="mailto:mdforhadhossainrahi10@gmail.com"
-              className="text-secondary hover:text-hover transition duration-300"
+              className="text-secondary border-opacity-40 rounded-md hover:te3t-hover transition duration-300"
             >
               mdforhadhossainrahi10@gmail.com
             </a>
