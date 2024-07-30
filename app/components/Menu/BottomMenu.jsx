@@ -17,7 +17,7 @@ const BottomMenu = () => {
   return (
     <div className="flex items-center justify-end lg:justify-between">
       <h1 className="hidden lg:flex text-secondary text-sm">
-        Designed & Built by <span className="font-medium text-hover">FH RAHI</span>
+        Designed & Built by <span className="font-medium text-hover pl-2">FH RAHI</span>
       </h1>
       <div className="pr-2">
         <SeeMore url={redirectPathData?.redirect} title={redirectPathData.title} />
