@@ -3,7 +3,6 @@
 import React, { useState } from "react";
 import { LuCircleDashed } from "react-icons/lu";
 import Modal from "../Modal/Modal";
-import SeeMore from "../SeeMore/SeeMore";
 
 const GlassCard = ({ title, children, onViewClick }) => (
   <div className="relative group overflow-hidden border border-hover bg-opacity-90 backdrop-blur-lg transition-all duration-300 w-full h-60">
@@ -82,10 +81,6 @@ const About = () => {
         title={modalState.title}
         content={modalState.content}
       />
-
-      <div className="flex items-end justify-end pr-2">
-        <SeeMore url={"/projects"} title={`Lets Continue To Projects`} />
-      </div>
     </div>
   );
 };

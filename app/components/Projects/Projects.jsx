@@ -2,7 +2,6 @@
 import React, { useState } from "react";
 import tabsData from "@/public/data/about_tabs";
 import ProductCard from "../ProjectCard/ProjectCard";
-import SeeMore from "../SeeMore/SeeMore";
 
 const Projects = () => {
   const [activeTab, setActiveTab] = useState(tabsData[0].id);
@@ -42,9 +41,6 @@ const Projects = () => {
         {tabsData.map((content) => (
           <ProductCard key={content.id} content={content} />
         ))}
-      </div>
-      <div className="flex items-end justify-end pr-2">
-        <SeeMore url={"/resume"} title={`Lets Go To My Resume`} />
       </div>
     </div>
   );

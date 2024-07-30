@@ -4,7 +4,6 @@ import React from "react";
 import { useForm } from "react-hook-form";
 import { ImLocation, ImPhone } from "react-icons/im";
 import { FiMail } from "react-icons/fi";
-import SeeMore from "../SeeMore/SeeMore";
 
 const Contact = () => {
   const {
@@ -107,10 +106,6 @@ const Contact = () => {
             </a>
           </div>
         </div>
-      </div>
-
-      <div className="flex items-end justify-end pr-2">
-        <SeeMore url={"/"} title={`Go Back Home`} />
       </div>
     </div>
   );

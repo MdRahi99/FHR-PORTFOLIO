@@ -4,6 +4,7 @@ import MobileMenu from "../components/Menu/MobileMenu";
 import TopMenu from "../components/Menu/TopMenu";
 import LeftMenu from "../components/Menu/LeftMenu";
 import RightMenu from "../components/Menu/RightMenu";
+import BottomMenu from "../components/Menu/BottomMenu";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -31,10 +32,13 @@ export default function RootLayout({ children }) {
               <RightMenu />
             </div>
           </div>
-          {/* Sidebar for mobile (hidden on lg screens) */}
-          <div className="lg:hidden fixed bottom-0 left-0 right-0 z-10">
-            <MobileMenu />
+          <div className="pt-4">
+            <BottomMenu />
           </div>
+          {/* Sidebar for mobile (hidden on lg screens) */}
+          {/* <div className="lg:hidden fixed bottom-0 left-0 right-0 z-10">
+            <MobileMenu />
+          </div> */}
         </div>
       </body>
     </html>

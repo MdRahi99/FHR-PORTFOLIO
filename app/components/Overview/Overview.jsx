@@ -1,10 +1,7 @@
 /* eslint-disable react/no-unescaped-entities */
 "use client";
-import Image from "next/image";
 import React from "react";
-import profile from "../../../public/images/profile.png";
 import { TypeAnimation } from "react-type-animation";
-import SeeMore from "../SeeMore/SeeMore";
 import LogoMarquee from "../LogoMarquee/LogoMarquee";
 
 const Overview = () => {
@@ -49,10 +46,6 @@ const Overview = () => {
 
       <div className="pt-4 lg:pt-12">
         <LogoMarquee />
-      </div>
-
-      <div className="flex items-end justify-end pr-2">
-        <SeeMore url={"/about"} title={`See More About Me`} />
       </div>
     </div>
   );
