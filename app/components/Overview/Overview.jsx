@@ -5,6 +5,7 @@ import React from "react";
 import profile from "../../../public/images/profile.png";
 import { TypeAnimation } from "react-type-animation";
 import SeeMore from "../SeeMore/SeeMore";
+import LogoMarquee from "../LogoMarquee/LogoMarquee";
 
 const Overview = () => {
   return (
@@ -17,7 +18,7 @@ const Overview = () => {
         />
       </div> */}
 
-      <div className="flex flex-col gap-6">
+      <div className="flex flex-col gap-4 lg:gap-8">
         <h1 className="text-hover font-medium">Hi,</h1>
         <h2 className="text-3xl lg:text-5xl">I'm Md Forhad Hossain </h2>
         <h1 className="text-2xl lg:text-3xl font-semibold w-full">
@@ -45,6 +46,11 @@ const Overview = () => {
           something amazing together! Reach out to me.
         </p>
       </div>
+
+      <div className="pt-4 lg:pt-12">
+        <LogoMarquee />
+      </div>
+
       <div className="flex items-end justify-end pr-2">
         <SeeMore url={"/about"} title={`See More About Me`} />
       </div>
