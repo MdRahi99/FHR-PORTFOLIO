@@ -6,9 +6,8 @@ import project from "../../../public/images/project.jpg";
 import Image from "next/image";
 
 const ProjectCard = ({ content }) => {
-  console.log(content);
   return (
-    <div className="relative w-full rounded-md h-96 lg:h-64 shadow-lg overflow-hidden">
+    <div className="relative w-full rounded-md h-80 lg:h-64 shadow-lg overflow-hidden">
       {/* Background image */}
       <Image
         src={project}
@@ -34,8 +33,7 @@ const ProjectCard = ({ content }) => {
             Integrating Algolia Search with WordPress Multisite
           </h3>
           <p className="text-primary text-sm">
-            Building a custom multisite compatible WordPress plugin to build
-            global search with Algolia
+           {content.content.slice(0,60)}...
           </p>
         </div>
         <div className="flex space-x-2">

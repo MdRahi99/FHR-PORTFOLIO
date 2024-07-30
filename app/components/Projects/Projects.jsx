@@ -8,7 +8,7 @@ const Projects = () => {
 
   return (
     <div className="flex flex-col gap-4">
-      <div className="flex flex-col lg:flex-row gap-8 lg:items-center justify-between">
+      <div className="flex flex-col lg:flex-row gap-4 lg:gap-8 lg:items-center justify-between">
         <div className="">
           <h1 className="text-2xl lg:text-3xl font-bold mb-4">Projects</h1>
           <div className="w-20 h-1 bg-hover"></div>
@@ -37,7 +37,7 @@ const Projects = () => {
           </div>
         </div>
       </div>
-      <div className="mt-4 grid grid-cols-1 lg:grid-cols-2 gap-4">
+      <div className="grid grid-cols-1 lg:grid-cols-3 gap-4">
         {tabsData.map((content) => (
           <ProductCard key={content.id} content={content} />
         ))}
