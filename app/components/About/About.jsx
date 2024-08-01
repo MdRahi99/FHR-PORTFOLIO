@@ -1,23 +1,11 @@
 "use client";
 
-import React, { useState } from "react";
-import Modal from "../Modal/Modal";
+import React from "react";
+import Skills from "./Skills";
+import Profile from "./Profile";
+import Experience from "./Experience";
 
 const About = () => {
-  const [modalState, setModalState] = useState({
-    isOpen: false,
-    title: "",
-    content: "",
-  });
-
-  const openModal = (title, content) => {
-    setModalState({ isOpen: true, title, content });
-  };
-
-  const closeModal = () => {
-    setModalState({ ...modalState, isOpen: false });
-  };
-
   return (
     <div className="flex flex-col">
       <div>
@@ -25,8 +13,25 @@ const About = () => {
         <div className="w-20 h-1 bg-hover mb-6"></div>
       </div>
 
-      <div>
+      <div className="flex flex-col lg:flex-row gap-4">
+        {/* Left column */}
+        <div className="flex-1 bg-secondary rounded-lg p-4">
+          <Profile />
+        </div>
 
+        {/* Right column */}
+        <div className="flex-1 flex flex-col gap-4">
+          <div className="bg-secondary rounded-lg p-6">
+            <h2 className="text-lg font-medium mb-2">Skills</h2>
+            <div className="border border-hover w-8 mb-6"></div>
+            <Skills />
+          </div>
+          <div className="bg-secondary rounded-lg p-6">
+            <h2 className="text-lg font-medium mb-2">Work Experience</h2>
+            <div className="border border-hover w-8 mb-6"></div>
+            <Experience />
+          </div>
+        </div>
       </div>
     </div>
   );
