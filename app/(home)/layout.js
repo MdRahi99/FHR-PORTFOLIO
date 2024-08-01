@@ -17,7 +17,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body className={`${inter.className} text-white bg-primary`}>
-        <div className="fixed inset-0 flex flex-col max-w-[1500px] mx-auto 2xl:px-16 xl:px-14 lg:px-12 md:px-10 px-4 py-4">
+        <div className="fixed inset-0 flex flex-col max-w-[1500px] max-h-[1000px] mx-auto 2xl:px-16 xl:px-14 lg:px-12 md:px-10 px-4 py-4">
           <div className="flex-shrink-0 pb-4">
             <TopMenu />
           </div>
