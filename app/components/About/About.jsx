@@ -24,6 +24,10 @@ const About = () => {
         <h1 className="text-2xl lg:text-3xl font-bold mb-4">About Me</h1>
         <div className="w-20 h-1 bg-hover mb-6"></div>
       </div>
+
+      <div>
+
+      </div>
     </div>
   );
 };

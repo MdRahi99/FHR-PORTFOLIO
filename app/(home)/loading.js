@@ -2,7 +2,7 @@ import React from 'react';
 
 export default function Loader() {
     return (
-        <div className="w-full h-screen flex items-center justify-center">
+        <div className="w-full h-[100%] flex items-center justify-center">
             <div className="relative">
                 <div className="loader">
                     <span></span>
