@@ -14,7 +14,7 @@ const Overview = ({ data }) => {
     <div className="h-full flex flex-col gap-4 pt-10 lg:pt-20">
       <div className="flex flex-col gap-4 lg:gap-8">
         <h1 className="text-hover font-medium">Hi,</h1>
-        <h2 className="text-3xl lg:text-5xl">I'm {name}</h2>
+        <h2 className="text-3xl lg:text-5xl">I&apos;m {name}</h2>
         <h1 className="text-2xl lg:text-3xl font-semibold w-full">
           <span className="text-hover font-normal">
             <TypeAnimation
