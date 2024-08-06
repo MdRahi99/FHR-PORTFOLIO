@@ -1,18 +1,16 @@
 import React from "react";
 import Image from "next/image";
+import profile from "../../../public/images/profile.png"
 import Link from "next/link";
 import { FiCode } from "react-icons/fi";
 
 const Profile = ({data}) => {
   const { name, email, degree, subject, duration, university, image } = data;
-  console.log(data);
   return (
     <div className="flex flex-col items-center gap-4 lg:gap-8">
       <div className="flex flex-col items-center gap-2">
         <div className="rounded-full overflow-hidden w-48 h-48">
-          {/* Image placeholder */}
-          <Image src={image} alt="profile" width={900} height={900} />
-          <div className="w-full h-full bg-primary"></div>
+          <Image src={image ? image : profile} alt="profile" width={900} height={900} />
         </div>
         <h2 className="text-xl font-bold">{name}</h2>
         <p className="text-secondary">{email}</p>
