@@ -5,7 +5,8 @@ import Skills from "./Skills";
 import Profile from "./Profile";
 import Experience from "./Experience";
 
-const About = () => {
+const About = ({data}) => {
+ 
   return (
     <div className="flex flex-col">
       <div>
@@ -16,7 +17,7 @@ const About = () => {
       <div className="flex flex-col lg:flex-row gap-4">
         {/* Left column */}
         <div className="flex-1 bg-secondary rounded-lg p-4">
-          <Profile />
+          <Profile data={data} />
         </div>
 
         {/* Right column */}

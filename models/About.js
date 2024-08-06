@@ -2,6 +2,17 @@ import mongoose from 'mongoose';
 
 const { Schema } = mongoose;
 
+const progressSchema = new Schema({
+  title: {
+    type: String,
+    required: true,
+  },
+  data: {
+    type: Number,
+    required: true,
+  },
+});
+
 const aboutSchema = new Schema({
   name: {
     type: String,
@@ -9,6 +20,14 @@ const aboutSchema = new Schema({
   },
   email: {
     type: String,
+    required: true,
+  },
+  profileInfo: {
+    type: String,
+    required: true,
+  },
+  designation: {
+    type: [String],
     required: true,
   },
   degree: {
@@ -29,6 +48,10 @@ const aboutSchema = new Schema({
   },
   image: {
     type: String,
+    required: true,
+  },
+  progress: {
+    type: [progressSchema],
     required: true,
   },
 });

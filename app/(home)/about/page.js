@@ -1,12 +1,13 @@
 import React from 'react';
 import About from '../../components/About/About';
+import { getAbout } from '@/app/actions/getAbout';
 
-const page = () => {
+export default async function AboutMe() {
+    const profileData = await getAbout();
     return (
-        <div>
-            <About />
-        </div>
+      <div className="">
+        <About data={profileData.data[0]} />
+      </div>
     );
-};
-
-export default page;
+  }
+  

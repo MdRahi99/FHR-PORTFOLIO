@@ -1,27 +1,28 @@
 import React from "react";
 import Image from "next/image";
-import profile from "../../../public/images/profile.png";
 import Link from "next/link";
 import { FiCode } from "react-icons/fi";
 
-const Profile = () => {
+const Profile = ({data}) => {
+  const { name, email, degree, subject, duration, university, image } = data;
+  console.log(data);
   return (
     <div className="flex flex-col items-center gap-4 lg:gap-8">
       <div className="flex flex-col items-center gap-2">
         <div className="rounded-full overflow-hidden w-48 h-48">
           {/* Image placeholder */}
-          <Image src={profile} alt="profile" />
+          <Image src={image} alt="profile" width={900} height={900} />
           <div className="w-full h-full bg-primary"></div>
         </div>
-        <h2 className="text-xl font-bold">Md Forhad Hossain Rahi</h2>
-        <p className="text-secondary">fhrstation21@gmail.com</p>
+        <h2 className="text-xl font-bold">{name}</h2>
+        <p className="text-secondary">{email}</p>
       </div>
       <div className="text-center flex flex-col gap-2">
         <h2 className="text-sm font-medium">Education</h2>
         <h3 className="text-lg font-medium">
-          Bachelor in Computer Science (2019-2023)
+          {degree} in {subject} ({duration})
         </h3>
-        <h4 className="text-secondary">Daffodil International University</h4>
+        <h4 className="text-secondary">{university}</h4>
       </div>
       <Link
         href="/projects"
