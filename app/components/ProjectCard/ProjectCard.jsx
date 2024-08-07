@@ -45,9 +45,9 @@ const ProjectCard = ({ content }) => {
           </h4>
         </div>
         <div className="flex space-x-2">
-          {technologies?.slice(0, 3).map((tech) => {
+          {technologies?.slice(0, 3).map((tech, index) => {
             return (
-              <span className="bg-primary px-4 py-2 text-xs rounded text-white">
+              <span key={index} className="bg-primary px-4 py-2 text-xs rounded text-white">
                 {tech?.title}
               </span>
             );
