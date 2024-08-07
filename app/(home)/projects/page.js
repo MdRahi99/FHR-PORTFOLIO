@@ -1,12 +1,14 @@
-import Projects from '@/app/components/Projects/Projects';
-import React from 'react';
+import React from "react";
+import Projects from "@/app/components/Projects/Projects";
+import { getProjects } from "@/app/hooks/getProjects";
 
-const page = () => {
-    return (
-        <div>
-            <Projects />
-        </div>
-    );
-};
+export default async function Page() {
+  const projectsData = await getProjects();
+  return (
+    <div className="">
+      <Projects projectsData={projectsData} />
+    </div>
+  );
+}
 
-export default page;
+export const revalidate = 3600;
