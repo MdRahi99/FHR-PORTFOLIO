@@ -22,13 +22,13 @@ export default function RootLayout({ children }) {
             <TopMenu />
           </div>
           <div className="flex-grow flex overflow-hidden">
-            <div className="w-1/6 hidden lg:flex">
+            <div className="w-[12%] hidden lg:flex">
               <LeftMenu />
             </div>
-            <div className="lg:w-4/6 w-full overflow-y-auto py-4 lg:py-0 custom-scrollbar">
+            <div className="lg:w-[76%] w-full overflow-y-auto py-4 lg:py-0 custom-scrollbar">
               {children}
             </div>
-            <div className="w-1/6 hidden lg:flex justify-end items-center">
+            <div className="w-[12%] hidden lg:flex justify-end items-center">
               <RightMenu />
             </div>
           </div>
