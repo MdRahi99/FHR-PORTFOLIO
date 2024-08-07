@@ -1,10 +1,8 @@
-import Overview from "../../components/Overview/Overview";
-
-export default async function Home() {
+export default async function Admin() {
 
   return (
       <div className="">
-          <Overview />
+          Admin
       </div>
   );
 }
