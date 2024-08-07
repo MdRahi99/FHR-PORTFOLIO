@@ -5,7 +5,7 @@ import Skills from "./Skills";
 import Profile from "./Profile";
 import Experience from "./Experience";
 
-const About = ({profileData, skillsData}) => {
+const About = ({profileData, skillsData, experienceData}) => {
  
   return (
     <div className="flex flex-col">
@@ -30,7 +30,7 @@ const About = ({profileData, skillsData}) => {
           <div className="bg-secondary rounded-lg p-6">
             <h2 className="text-lg font-medium mb-2">Work Experience</h2>
             <div className="border border-hover w-8 mb-6"></div>
-            <Experience />
+            <Experience data={experienceData} />
           </div>
         </div>
       </div>
