@@ -3,11 +3,11 @@ import mongoose from 'mongoose';
 const { Schema } = mongoose;
 
 const technologySchema = new Schema({
-    title: {
-      type: String,
-      required: true,
-    },
-  });
+  title: {
+    type: String,
+    required: true,
+  },
+});
 
 const projectsSchema = new Schema({
   title: {
@@ -27,7 +27,8 @@ const projectsSchema = new Schema({
     required: true,
   },
   category: {
-    type: String,
+    type: Schema.Types.ObjectId,
+    ref: 'ProjectCategory',
     required: true,
   },
   technologies: {
