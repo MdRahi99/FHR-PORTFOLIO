@@ -14,7 +14,7 @@ const Projects = ({ projectsData, categoryData }) => {
   return (
     <div className="flex flex-col gap-4">
       <div className="flex flex-col lg:flex-row gap-4 lg:gap-8 lg:items-center justify-between">
-        <div className="">
+        <div className="mb-8">
           <h1 className="text-2xl lg:text-3xl font-bold mb-4">Projects</h1>
           <div className="w-20 h-1 bg-hover"></div>
         </div>
@@ -42,9 +42,12 @@ const Projects = ({ projectsData, categoryData }) => {
           </div>
         </div>
       </div>
-      <div className="grid grid-cols-1 lg:grid-cols-3 gap-4">
+      <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
         {filteredProjects?.map((content) => (
-          <ProductCard key={content._id} content={content} />
+          <div key={content?._id} className="mb-2 flex flex-col gap-2 bg-secondary p-4 rounded-lg">
+            <h1>{content?.title}</h1>
+            <ProductCard content={content} />
+          </div>
         ))}
       </div>
     </div>

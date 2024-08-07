@@ -27,8 +27,7 @@ const projectsSchema = new Schema({
     required: true,
   },
   category: {
-    type: Schema.Types.ObjectId,
-    ref: 'ProjectCategory',
+    type: String,
     required: true,
   },
   technologies: {

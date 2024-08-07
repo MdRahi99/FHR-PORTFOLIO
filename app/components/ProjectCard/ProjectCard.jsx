@@ -8,14 +8,14 @@ const ProjectCard = ({ content }) => {
   const { title, image, sourceCode, url, type, description, technologies } =
     content;
   return (
-    <div className="relative w-full rounded-md h-80 lg:h-64 shadow-lg overflow-hidden">
+    <div className="relative rounded-lg w-full h-80 lg:h-64 shadow-lg overflow-hidden">
       {/* Background image */}
       <Image
         src={image}
         alt="Project"
         width={900}
         height={900}
-        className="absolute inset-0 rounded-md opacity-90 w-full h-full object-cover"
+        className="absolute inset-0 rounded-lg opacity-90 w-full h-full object-cover"
       />
 
       {/* Glass effect on hover for larger screens, visible by default on small screens */}
