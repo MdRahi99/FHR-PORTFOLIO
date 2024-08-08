@@ -68,16 +68,16 @@ const Projects = ({ projectsData, categoryData }) => {
             key={content?._id}
             className="mb-2 flex flex-col gap-4 bg-secondary pb-3 rounded-lg"
           >
-            <ProductCard content={content} />
-            <div className="flex items-center justify-between px-4">
+            <ProductCard content={content} handleDrawerOpen={handleDrawerOpen} />
+            <button onClick={() => handleDrawerOpen(content)} className="flex items-center justify-between px-4">
               <h1 className="text-center">{content?.title}</h1>
-              <button onClick={() => handleDrawerOpen(content)}>
+              <div>
                 <FaExpand
                   className="text-lg hover:text-hover"
                   title="View"
                 />
-              </button>
-            </div>
+              </div>
+            </button>
           </div>
         ))}
       </div>
