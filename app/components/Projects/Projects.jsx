@@ -1,15 +1,35 @@
 "use client";
 import React, { useState } from "react";
 import ProductCard from "../ProjectCard/ProjectCard";
+import { FaExpand } from "react-icons/fa";
+import dynamic from "next/dynamic";
+
+// Dynamically import SideDrawer to avoid SSR issues
+const SideDrawer = dynamic(() => import("../SideDrawer/SideDrawer"), {
+  ssr: false,
+});
 
 const Projects = ({ projectsData, categoryData }) => {
   const allCategory = { _id: "all", name: "All" };
   const categories = [allCategory, ...categoryData];
   const [activeTab, setActiveTab] = useState(allCategory.name);
+  const [drawerOpen, setDrawerOpen] = useState(false);
+  const [selectedProject, setSelectedProject] = useState(null);
 
-  const filteredProjects = activeTab === "All"
-    ? projectsData
-    : projectsData?.filter(project => project.category === activeTab);
+  const filteredProjects =
+    activeTab === "All"
+      ? projectsData
+      : projectsData?.filter((project) => project.category === activeTab);
+
+  const handleDrawerOpen = (project) => {
+    setSelectedProject(project);
+    setDrawerOpen(true);
+  };
+
+  const handleDrawerClose = () => {
+    setDrawerOpen(false);
+    setSelectedProject(null);
+  };
 
   return (
     <div className="flex flex-col gap-4">
@@ -44,12 +64,29 @@ const Projects = ({ projectsData, categoryData }) => {
       </div>
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
         {filteredProjects?.map((content) => (
-          <div key={content?._id} className="mb-2 flex flex-col gap-4 bg-secondary pb-4 rounded-b-lg">
+          <div
+            key={content?._id}
+            className="mb-2 flex flex-col gap-4 bg-secondary pb-3 rounded-b-lg"
+          >
             <ProductCard content={content} />
-            <h1 className="text-center">{content?.title}</h1>
+            <div className="flex items-center justify-between px-4">
+              <h1 className="text-center">{content?.title}</h1>
+              <button onClick={() => handleDrawerOpen(content)}>
+                <FaExpand
+                  className="text-lg text-hover hover:text-xl"
+                  title="View"
+                />
+              </button>
+            </div>
           </div>
         ))}
       </div>
+      {/* Drawer */}
+      <SideDrawer
+        isOpen={drawerOpen}
+        onClose={handleDrawerClose}
+        content={selectedProject}
+      />
     </div>
   );
 };
