@@ -2,13 +2,13 @@
 import React from "react";
 import { TypeAnimation } from "react-type-animation";
 import LogoMarquee from "../LogoMarquee/LogoMarquee";
+import Link from "next/link";
+import { BsFiletypePdf } from "react-icons/bs";
 
 const Overview = ({ data }) => {
-
   const { name, profileInfo, designation, progress } = data;
 
-  const sequence = designation.length
-    && [...designation, 1000]
+  const sequence = designation.length && [...designation, 1000];
 
   return (
     <div className="h-full flex flex-col gap-4 pt-10 lg:pt-20">
@@ -27,10 +27,16 @@ const Overview = ({ data }) => {
             />
           </span>
         </h1>
-        <p className="text-primary leading-8 text-justify">
-          {profileInfo}
-        </p>
+        <p className="text-primary leading-8 text-justify">{profileInfo}</p>
       </div>
+
+      <Link
+        href="/resume"
+        className="lg:hidden flex w-32 items-center justify-center py-1.5 my-4 rounded-md border-2 hover:border-primary hover:text-primary border-hover text-hover transition-all duration-300 ease-in-out"
+      >
+        <BsFiletypePdf className="mr-2" />
+        <span className="font-medium text-sm">Resume</span>
+      </Link>
 
       <div className="pt-4 lg:pt-12">
         <LogoMarquee progress={progress} />
