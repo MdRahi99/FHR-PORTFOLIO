@@ -6,7 +6,6 @@ import { FiGithub } from "react-icons/fi";
 import { TbExternalLink } from "react-icons/tb";
 
 const SideDrawer = ({ isOpen, onClose, content }) => {
-  console.log(content);
 
   const hasScrollbar = content?.image || content?.description || content?.technologies?.length > 0;
 
