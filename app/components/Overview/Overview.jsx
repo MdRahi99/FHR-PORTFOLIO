@@ -33,7 +33,7 @@ const Overview = ({ data }) => {
       </div>
 
       <div className="pt-4 lg:pt-12">
-        {/* <LogoMarquee progress={progress} /> */}
+        <LogoMarquee progress={progress} />
       </div>
     </div>
   );

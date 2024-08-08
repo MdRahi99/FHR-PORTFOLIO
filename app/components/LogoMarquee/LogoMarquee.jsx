@@ -1,10 +1,10 @@
 import React from "react";
-import Marquee from "react-marquee-slider";
+import Marquee from "react-fast-marquee";
 
 const LogoMarquee = ({progress}) => {
 
   return (
-    <Marquee velocity={30} minScale={0.7} resetAfterTries={200}>
+    <Marquee>
       {progress?.map((info) => (
         <div
           key={`card-${info?._id}`}
