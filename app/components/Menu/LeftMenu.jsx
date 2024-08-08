@@ -8,32 +8,32 @@ const LeftMenu = () => {
   const path = usePathname();
 
   return (
-    <div className="flex flex-col justify-center lg:flex-col gap-8">
-      <div className="h-24 flex pl-4">
-        <div className="border-l-2 border-secondary h-full"></div>
-      </div>
+    <div className="flex flex-col justify-center rounded-lg lg:flex-col gap-2">
       {sidebarItems?.map((item, index) => {
         const isActive = path === item.route;
+        const isLastItem = index === sidebarItems.length - 1;
+
         return (
-          <Link
-            href={item.route}
-            key={index}
-            className={`group flex items-center gap-4 p-2 rounded-md transition-colors duration-300 ${
-              isActive
-                ? "font-semibold text-hover"
-                : "text-secondary hover:text-hover"
-            }`}
-          >
-            {item.icon}
-            <h3 className="hidden lg:block opacity-0 group-hover:opacity-100 transition-all duration-300 transform translate-x-[-20px] group-hover:translate-x-0">
-              {item.name}
-            </h3>
-          </Link>
+          <div key={index}>
+            <Link
+              href={item.route}
+              className={`group flex items-center gap-4 p-2 rounded-md transition-colors duration-300 ${
+                isActive
+                  ? "font-semibold text-hover"
+                  : "text-secondary hover:text-hover"
+              }`}
+            >
+              {item.icon}
+              <h3 className="hidden lg:block opacity-100">{item.name}</h3>
+            </Link>
+            {!isLastItem && (
+              <div className="h-20 flex pl-5">
+                <div className="border-l-2 border-dashed border-secondary h-full"></div>
+              </div>
+            )}
+          </div>
         );
       })}
-      <div className="h-24 flex pl-4">
-        <div className="border-l-2 border-secondary h-full"></div>
-      </div>
     </div>
   );
 };
